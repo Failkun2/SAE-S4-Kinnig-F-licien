@@ -4,7 +4,7 @@ import '../models/Personne.dart';
 
 class ApiService{
   static Future<List<Personne>> fetchPeople() async{
-    final response = await http.get(Uri.parse('https://api.example.com/people'));
+    final response = await http.get(Uri.parse(''));
     if(response.statusCode == 200){
       List<dynamic> jsonResponse = json.decode(response.body);
       return jsonResponse.map((data) => Personne.fromJson(data)).toList();

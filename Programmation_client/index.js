@@ -1,12 +1,12 @@
 function loadEntries(){
-    fetch('https://api.webdirectory.core/entries')
+    fetch('')
         .then(response => response.json())
         .then(data => {
             const listContainer = document.getElementById('entry-list');
             listContainer.innerHTML = data.map(entry => `
                 <div class="entry" onclick="showEntryDetails(${entry.id})">
                     <p>${entry.nom} ${entry.prenom}</p>
-                    <p>${entry.service}</p>
+                    <p>${entry.departement}</p>
                 </div>
             `).join('');       
         })
@@ -29,7 +29,7 @@ function filterAndSearchEntries(){
             listContainer.innerHTML = filteredData.map(entry => `
                 <div class="entry" onclick="showEntryDetails(${entry.id})">
                     <p>${entry.nom} ${entry.prenom}</p>
-                    <p>${entry.service}</p>
+                    <p>${entry.departement}</p>
                 </div>
             `).join('');
         })
@@ -37,7 +37,7 @@ function filterAndSearchEntries(){
 }
 
 function showEntryDetails(entryId){
-    fetch(`https://api.webdirectory.core/e,tries/${entryId}`)
+    fetch(`api${entryId}`)
         .then(response => response.json())
         .then(data => {
             const detailContainer = document.getElementById('entry-detail');
