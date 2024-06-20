@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet client</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <h1>projet client</h1>
+        <input type="text" id="searchInput" placeholder="Recherche par nom">
+        <select id="serviceFilter">
+            <option value="">Tous les services</option>
+            <option value="HR">Ressources humaines</option>
+            <option value="IT">Informatique</option>
+            <option value="Finance">Finances</option>
+            <!--autres services-->
+        </select>
+        <button onclick="filterAndSearchEntries()">Rechercher</button>
+    </header>
+
+    <main>
+        <section id="entry-list-section">
+            <h2>Details des entrees</h2>
+            <div id="entry-list">
+                <!--liste d'entrées-->
+            </div>
+        </section>
+
+        <section id="entry-detail-section">
+            <h2>Details de l'entree</h2>
+            <div id="entry-detail">
+                <!--details de l'entree-->
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
