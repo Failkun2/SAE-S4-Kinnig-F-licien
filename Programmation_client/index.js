@@ -17,7 +17,7 @@ function filterAndSearchEntries(){
     const service = document.getElementById('serviceFilter').value;
     const name = document.getElementById('searchInput').value;
 
-    fetch('https://api.webdirectory.core/entries')
+    fetch('')
         .then(response => response.json())
         .then(data => {
             const filterdData = data.filter(entry =>{
@@ -37,7 +37,7 @@ function filterAndSearchEntries(){
 }
 
 function showEntryDetails(entryId){
-    fetch(`api${entryId}`)
+    fetch(`${entryId}`)
         .then(response => response.json())
         .then(data => {
             const detailContainer = document.getElementById('entry-detail');
